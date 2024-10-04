@@ -53,6 +53,7 @@ jobs:
           call :flatten_directory "ogg",
           call :flatten_directory "theora",
           call :flatten_directory "vorbis",
+          call :flatten_directory "lzo",
           exit /b
 
           :flatten_directory
