@@ -7,3 +7,6 @@
 [submodule "vorbis"]
 	path = vorbis
 	url = https://github.com/xiph/vorbis.git
+[submodule "cryptopp"]
+	path = cryptopp
+	url = https://github.com/weidai11/cryptopp.git
