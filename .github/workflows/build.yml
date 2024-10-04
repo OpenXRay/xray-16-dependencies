@@ -37,7 +37,6 @@ jobs:
             */include/**/*.h
             bin/**/*.dll
             bin/**/*.lib
-            bin/**/*.pdb
 
   pack-everything:
     name: Pack everything into one archive
