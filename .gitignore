@@ -1,0 +1,8 @@
+# exclude all dot files except .git, appveyor and travis files
+.*
+!.git*
+
+# exclude binaries and temporary files
+[Bb]in/
+[Bb]uild*/
+*.user

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="theora\lib\analyze.c" />
+    <ClCompile Include="theora\lib\encapiwrapper.c" />
+    <ClCompile Include="theora\lib\encfrag.c" />
+    <ClCompile Include="theora\lib\encinfo.c" />
+    <ClCompile Include="theora\lib\encode.c" />
+    <ClCompile Include="theora\lib\encoder_disabled.c" />
+    <ClCompile Include="theora\lib\enquant.c" />
+    <ClCompile Include="theora\lib\fdct.c" />
+    <ClCompile Include="theora\lib\huffenc.c" />
+    <ClCompile Include="theora\lib\mathops.c" />
+    <ClCompile Include="theora\lib\mcenc.c" />
+    <ClCompile Include="theora\lib\rate.c" />
+    <ClCompile Include="theora\lib\tokenize.c" />
+    <ClCompile Include="theora\lib\apiwrapper.c" />
+    <ClCompile Include="theora\lib\bitpack.c" />
+    <ClCompile Include="theora\lib\decapiwrapper.c" />
+    <ClCompile Include="theora\lib\decinfo.c" />
+    <ClCompile Include="theora\lib\decode.c" />
+    <ClCompile Include="theora\lib\dequant.c" />
+    <ClCompile Include="theora\lib\fragment.c" />
+    <ClCompile Include="theora\lib\huffdec.c" />
+    <ClCompile Include="theora\lib\idct.c" />
+    <ClCompile Include="theora\lib\info.c" />
+    <ClCompile Include="theora\lib\internal.c" />
+    <ClCompile Include="theora\lib\quant.c" />
+    <ClCompile Include="theora\lib\state.c" />
+    <ClCompile Include="theora\lib\x86_vc\x86cpu.c">
+      <Filter>x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="theora\lib\x86_vc\x86enc.c">
+      <Filter>x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="theora\lib\x86_vc\x86state.c">
+      <Filter>x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="theora\lib\x86_vc\mmxencfrag.c">
+      <Filter>x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="theora\lib\x86_vc\mmxidct.c">
+      <Filter>x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="theora\lib\x86_vc\mmxstate.c">
+      <Filter>x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="theora\lib\x86_vc\mmxfrag.c">
+      <Filter>x86_vc</Filter>
+    </ClCompile>
+    <ClCompile Include="theora\lib\x86_vc\mmxfdct.c">
+      <Filter>x86_vc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="theora\lib\internal.h" />
+    <ClInclude Include="theora\lib\encint.h" />
+    <ClInclude Include="theora\lib\enquant.h" />
+    <ClInclude Include="theora\lib\huffenc.h" />
+    <ClInclude Include="theora\lib\mathops.h" />
+    <ClInclude Include="theora\lib\modedec.h" />
+    <ClInclude Include="theora\lib\apiwrapper.h" />
+    <ClInclude Include="theora\lib\bitpack.h" />
+    <ClInclude Include="theora\lib\dct.h" />
+    <ClInclude Include="theora\lib\decint.h" />
+    <ClInclude Include="theora\lib\dequant.h" />
+    <ClInclude Include="theora\lib\huffdec.h" />
+    <ClInclude Include="theora\lib\huffman.h" />
+    <ClInclude Include="theora\lib\idct.h" />
+    <ClInclude Include="theora\lib\ocintrin.h" />
+    <ClInclude Include="theora\lib\quant.h" />
+    <ClInclude Include="theora\include\theora\codec.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="theora\include\theora\theora.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="theora\include\theora\theoradec.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="theora\lib\x86_vc\x86cpu.h">
+      <Filter>x86_vc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{8210571b-95b1-4d02-97a2-52a9e15cddf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x86_vc">
+      <UniqueIdentifier>{8028c763-b835-484f-be90-0b93df077ee2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

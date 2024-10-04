@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="xray_project_configurations.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{653F3841-3F26-49B9-AFCF-091DB4B67031}</ProjectGuid>
+    <RootNamespace>libtheora</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="xray_project_configuration.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Configuration">
+    <EnableUnitySupport Condition="'$(Platform)'=='Win32'">false</EnableUnitySupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="xray.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>theora\include;theora\lib;ogg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NONSTDC_NO_DEPRECATE;_BIND_TO_CURRENT_CRT_VERSION;_USRDLL;LIBTHEORA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Platform)'=='Win32'">OC_X86_ASM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="theora\include\theora\codec.h" />
+    <ClInclude Include="theora\include\theora\theora.h" />
+    <ClInclude Include="theora\include\theora\theoradec.h" />
+    <ClInclude Include="theora\lib\internal.h" />
+    <ClInclude Include="theora\lib\encint.h" />
+    <ClInclude Include="theora\lib\enquant.h" />
+    <ClInclude Include="theora\lib\huffenc.h" />
+    <ClInclude Include="theora\lib\mathops.h" />
+    <ClInclude Include="theora\lib\modedec.h" />
+    <ClInclude Include="theora\lib\apiwrapper.h" />
+    <ClInclude Include="theora\lib\bitpack.h" />
+    <ClInclude Include="theora\lib\dct.h" />
+    <ClInclude Include="theora\lib\decint.h" />
+    <ClInclude Include="theora\lib\dequant.h" />
+    <ClInclude Include="theora\lib\huffdec.h" />
+    <ClInclude Include="theora\lib\huffman.h" />
+    <ClInclude Include="theora\lib\idct.h" />
+    <ClInclude Include="theora\lib\ocintrin.h" />
+    <ClInclude Include="theora\lib\quant.h" />
+    <ClInclude Include="theora\lib\x86_vc\x86cpu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="theora\lib\analyze.c" />
+    <ClCompile Include="theora\lib\encapiwrapper.c" />
+    <ClCompile Include="theora\lib\encfrag.c" />
+    <ClCompile Include="theora\lib\encinfo.c" />
+    <ClCompile Include="theora\lib\encode.c" />
+    <ClCompile Include="theora\lib\encoder_disabled.c">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="theora\lib\enquant.c" />
+    <ClCompile Include="theora\lib\fdct.c" />
+    <ClCompile Include="theora\lib\huffenc.c" />
+    <ClCompile Include="theora\lib\mathops.c" />
+    <ClCompile Include="theora\lib\mcenc.c" />
+    <ClCompile Include="theora\lib\rate.c" />
+    <ClCompile Include="theora\lib\tokenize.c" />
+    <ClCompile Include="theora\lib\x86_vc\mmxencfrag.c" />
+    <ClCompile Include="theora\lib\x86_vc\mmxfdct.c" />
+    <ClCompile Include="theora\lib\x86_vc\x86cpu.c" />
+    <ClCompile Include="theora\lib\x86_vc\x86enc.c" />
+    <ClCompile Include="theora\lib\apiwrapper.c" />
+    <ClCompile Include="theora\lib\bitpack.c" />
+    <ClCompile Include="theora\lib\decapiwrapper.c" />
+    <ClCompile Include="theora\lib\decinfo.c" />
+    <ClCompile Include="theora\lib\decode.c" />
+    <ClCompile Include="theora\lib\dequant.c" />
+    <ClCompile Include="theora\lib\fragment.c" />
+    <ClCompile Include="theora\lib\huffdec.c" />
+    <ClCompile Include="theora\lib\idct.c" />
+    <ClCompile Include="theora\lib\info.c" />
+    <ClCompile Include="theora\lib\internal.c" />
+    <ClCompile Include="theora\lib\quant.c" />
+    <ClCompile Include="theora\lib\state.c" />
+    <ClCompile Include="theora\lib\x86_vc\mmxfrag.c" />
+    <ClCompile Include="theora\lib\x86_vc\mmxidct.c" />
+    <ClCompile Include="theora\lib\x86_vc\mmxstate.c" />
+    <ClCompile Include="theora\lib\x86_vc\x86state.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

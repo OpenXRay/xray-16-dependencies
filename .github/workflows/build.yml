@@ -1,0 +1,83 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: ${{ matrix.configuration }} ${{ matrix.platform }}
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        configuration:
+          - Debug
+          - Mixed
+          - Release
+          - Release Master Gold
+        platform: [x64, x86, ARM, ARM64]
+    steps:
+    - uses: actions/checkout@main
+      with:
+        submodules: recursive
+
+    - uses: microsoft/setup-msbuild@main
+
+    - name: Build
+      run: msbuild /m /p:Configuration="${{ matrix.configuration }}" /p:Platform="${{ matrix.platform }}" dependencies.sln
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@main
+      with:
+        name: xray-16-dependencies ${{ matrix.configuration }} ${{ matrix.platform }} (github-${{ github.run_number }})
+        path: |
+            */include/**/*.h
+            bin/**/*.dll
+            bin/**/*.lib
+            bin/**/*.pdb
+
+  pack-everything:
+    name: Pack everything into one archive
+    needs: build
+    runs-on: windows-latest
+    steps:
+      - name: Download everything from previous jobs
+        uses: actions/download-artifact@v4
+
+      - name: Unify folders
+        shell: cmd
+        run: |
+          call :flatten_directory "xray-16-dependencies*", /r
+          call :flatten_directory "ogg",
+          call :flatten_directory "theora",
+          call :flatten_directory "vorbis",
+          exit /b
+
+          :flatten_directory
+          for /d %2 %%D in ("%1") do (
+              echo Moving contents of %%D to the parent directory...
+
+              rem Copy all files and directories recursively
+              xcopy "%%D\*" "${{ github.workspace }}" /E /I /K /Y
+
+              rem Delete original directory
+              rd /s /q "%%D"
+          )
+
+      - name: Show files we have
+        run: Get-ChildItem -Recurse
+
+      - name: Upload unified artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: xray-16-dependencies (github-${{ github.run_number }})
+          path: "*"
+          compression-level: 9
+
+      # XXX: to be uploaded as a release, not artifact
+      #- name: Pack shipping archive
+      #  run: |
+      #    7z a xray-16-dependencies.zip * -xr!*.pdb
+      #    7z a "xray-16-dependencies Symbols.zip" bin\*.pdb
