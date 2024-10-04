@@ -10,3 +10,6 @@
 [submodule "cryptopp"]
 	path = cryptopp
 	url = https://github.com/weidai11/cryptopp.git
+[submodule "GameSpy"]
+	path = GameSpy
+	url = https://github.com/OpenXRay/GameSpy.git

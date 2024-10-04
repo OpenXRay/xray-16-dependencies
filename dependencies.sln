@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lzo", "lzo.vcxproj", "{614A
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cryptlib", "cryptlib.vcxproj", "{C39F4B46-6E89-4074-902E-CA57073044D2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameSpy", "GameSpy.vcxproj", "{67FF193E-2C20-402A-9026-9F5F6327503C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -219,6 +221,38 @@ Global
 		{C39F4B46-6E89-4074-902E-CA57073044D2}.Release|x64.Build.0 = Release|x64
 		{C39F4B46-6E89-4074-902E-CA57073044D2}.Release|x86.ActiveCfg = Release|Win32
 		{C39F4B46-6E89-4074-902E-CA57073044D2}.Release|x86.Build.0 = Release|Win32
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Debug|ARM.ActiveCfg = Debug|ARM
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Debug|ARM.Build.0 = Debug|ARM
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Debug|ARM64.Build.0 = Debug|ARM64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Debug|x64.ActiveCfg = Debug|x64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Debug|x64.Build.0 = Debug|x64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Debug|x86.ActiveCfg = Debug|Win32
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Debug|x86.Build.0 = Debug|Win32
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Mixed|ARM.ActiveCfg = Mixed|ARM
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Mixed|ARM.Build.0 = Mixed|ARM
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Mixed|ARM64.ActiveCfg = Mixed|ARM64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Mixed|ARM64.Build.0 = Mixed|ARM64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Mixed|x64.ActiveCfg = Mixed|x64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Mixed|x64.Build.0 = Mixed|x64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Mixed|x86.ActiveCfg = Mixed|Win32
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Mixed|x86.Build.0 = Mixed|Win32
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release Master Gold|ARM.ActiveCfg = Release Master Gold|ARM
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release Master Gold|ARM.Build.0 = Release Master Gold|ARM
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release Master Gold|ARM64.ActiveCfg = Release Master Gold|ARM64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release Master Gold|ARM64.Build.0 = Release Master Gold|ARM64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release Master Gold|x64.ActiveCfg = Release Master Gold|x64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release Master Gold|x64.Build.0 = Release Master Gold|x64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release Master Gold|x86.ActiveCfg = Release Master Gold|Win32
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release Master Gold|x86.Build.0 = Release Master Gold|Win32
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release|ARM.ActiveCfg = Release|ARM
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release|ARM.Build.0 = Release|ARM
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release|ARM64.ActiveCfg = Release|ARM64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release|ARM64.Build.0 = Release|ARM64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release|x64.ActiveCfg = Release|x64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release|x64.Build.0 = Release|x64
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release|x86.ActiveCfg = Release|Win32
+		{67FF193E-2C20-402A-9026-9F5F6327503C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -34,6 +34,7 @@ jobs:
         name: xray-16-dependencies ${{ matrix.configuration }} ${{ matrix.platform }} (github-${{ github.run_number }})
         path: |
             cryptopp/*.h
+            GameSpy/src/GameSpy/**/*.h
             */include/**/*.h
             bin/**/*.dll
             bin/**/*.lib
@@ -54,7 +55,12 @@ jobs:
           call :flatten_directory "theora",
           call :flatten_directory "vorbis",
           call :flatten_directory "lzo",
+
           move cryptopp include
+
+          move GameSpy/src/GameSpy include
+          rmdir /s /q GameSpy
+
           exit /b
 
           :flatten_directory
