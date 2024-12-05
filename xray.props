@@ -36,6 +36,7 @@
       <ConformanceMode>true</ConformanceMode>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <TreatWarningAsError>false</TreatWarningAsError>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <LargeAddressAware>true</LargeAddressAware>
@@ -59,14 +60,9 @@
   </ItemDefinitionGroup>
 
   <!-- Common release settings -->
-  <PropertyGroup Condition="$(Configuration.Contains('Release'))" Label="Configuration">
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-  </PropertyGroup>
-
   <ItemDefinitionGroup Condition="$(Configuration.Contains('Release'))">
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <WholeProgramOptimization>true</WholeProgramOptimization>
       <Optimization>MaxSpeed</Optimization>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
